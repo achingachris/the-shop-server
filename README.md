@@ -14,7 +14,7 @@ Title and cover photo, table of content
 ## user feature
 
 membership by subscription only
-subsrciption type: MONTHLY & YEARLY.
+subsrciption type: MONTHLY & YEARLY. (or Purchase a copy)
 Buy specific issue & read online (order to get printed copy)
 
 ## Color Theme
@@ -32,3 +32,7 @@ Yet to be selected
 ## payment integration
 
 Mpesa & Paypal
+
+# Categories
+
+Beauty, Entrepreneur, trends,  travel, fashion pictorial, health, fashion, men's corner, culture, lifestyle, food
