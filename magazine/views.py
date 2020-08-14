@@ -1,3 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+# landing page view
+def landingPage(request):
+    context = {}
+    return render(request, 'magazine/index.html', context)
+
+# about page view
+def aboutPage(request):
+    context = {}
+    return render(request, 'magazine/about.html', context)
