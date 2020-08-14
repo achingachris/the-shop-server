@@ -33,26 +33,37 @@ PUBLISH_LIST = (
 # end here
 
 class Issue(models.Model):
-    issue_id = models.CharField("Issue Number", max_length=10, null=False, blank=False, unique=True)
+    issue_id = models.CharField("Issue Number", max_length=20, null=False, blank=False, unique=True)
     issue_pub_date = models.DateTimeField("Issue Publication Date", default=timezone.now,)
     issue_status = models.CharField("Issue Status", choices=PUBLISH_LIST, default='draft', max_length=10)
 
+    def __str__(self):
+        return self.issue_id
+
 class Magazine(models.Model):
-    magazine_id = models.CharField("Magazine Name", max_length=10, null=False, blank=False)
+    magazine_id = models.CharField("Magazine Name", max_length=50, null=False, blank=False)
     mag_issue = models.ForeignKey(Issue, on_delete=models.CASCADE)
     mag_date1 = models.DateField("Magazine Date")
     mag_date2 = models.DateField("Magazine Date")
 
+    def __str__(self):
+        return self.magazine_id
+
 class Category(models.Model):
     category_name = models.CharField(choices=CATEGORY_LIST, default='general', max_length=17,)
     category_description = models.TextField(max_length=3000)
-    category_image = models.ImageField(storage=fs, blank=False, null=False)
+    category_image = models.ImageField(storage=fs, blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return self.category_name
 
 class Article(models.Model):
-    article_id = models.CharField("Article ID", max_length=10, null=False, blank=False, unique=True)
-    header_image = models.ImageField("Head Image", storage=fs, blank=False, null=False)
-    title = models.CharField("Article Title", max_length=10)
-    summary = models.CharField("Article Summary", max_length=50, null=False, blank=False)
+    header_image = models.ImageField("Head Image", storage=fs, blank=True, null=True)
+    title = models.CharField("Article Title", max_length=30)
+    summary = models.CharField("Article Summary", max_length=100, null=False, blank=False)
     body = models.TextField("Article Body", blank=False, null=False)
     body_image = models.ImageField("Article Image", storage=fs, blank=True, null=True)
     slug = models.SlugField(max_length=20, unique_for_date='publish_date')
@@ -61,3 +72,9 @@ class Article(models.Model):
     article_status = models.CharField("Issue Status", choices=PUBLISH_LIST, default='draft', max_length=10)
     publish_date = models.DateTimeField("Issue Publication Date", default=timezone.now)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
+
+    class Meta:
+        ordering = ['-publish_date']
+
+    def __str__(self):
+        return self.title
