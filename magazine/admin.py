@@ -30,3 +30,4 @@ class CategoryAdmin(admin.ModelAdmin):
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'article_status', 'category', 'article_issue')
     list_filter = ('author', 'article_status', 'category', 'article_issue')
+    prepopulated_fields = {'slug': ('title',)}
