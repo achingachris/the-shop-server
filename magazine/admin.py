@@ -1,6 +1,13 @@
 from django.contrib import admin
 from .models import Magazine, Issue, Category, Article
 
+
+# Custom Admin Page
+admin.site.site_header = "The Coast Woman Admin"
+admin.site.site_title = "Coast Woman"
+admin.site.index_title = "Coast Woman Admin"
+
+# Models Admin
 # admin.site.register(Magazine)
 @admin.register(Magazine)
 class MagazineAdmin(admin.ModelAdmin):
