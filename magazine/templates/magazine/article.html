@@ -1,0 +1,12 @@
+{% extends 'magazine/_base.html' %}
+{% load static %}
+
+{% block content %}
+ <h1 class="mt-6">
+     Articless PAGE
+ </h1>
+ <div>
+    <h2>{{ object.title }</h2>
+    <p>{{ object.body }}</p>
+  </div>
+{% endblock content %}

@@ -5,4 +5,10 @@
 <h class="mt-6">
     LANDING PAGE
 </h>
+<h1>Articles</h1>
+{% for article in object_list %}
+  <ul>
+    <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
+  </ul>
+{% endfor %}
 {% endblock content %}
