@@ -4,9 +4,9 @@ from .models import Issue, Magazine, Category, Article
 
 # landing page view
 def landingPage(request):
-    article_list = Article.objects.filter()
+    # article_list = Article.objects.filter()
     context = {}
-    return render(request, 'magazine/index.html', {'article_list': article_list})
+    return render(request, 'magazine/index.html', context)
 
 # about page view
 def aboutPage(request):
