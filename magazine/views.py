@@ -14,3 +14,8 @@ def aboutPage(request):
 def articlepage(request):
     context = {}
     return render(request, 'magazine/article.html', context)
+
+# category list page view
+def categorylist(request):
+    context = {}
+    return render(request, 'magazine/category_post_list.html', context)
