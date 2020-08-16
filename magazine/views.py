@@ -9,3 +9,8 @@ def landingPage(request):
 def aboutPage(request):
     context = {}
     return render(request, 'magazine/about.html', context)
+
+# article page view
+def articlepage(request):
+    context = {}
+    return render(request, 'magazine/article.html', context)
