@@ -19,3 +19,8 @@ def articlepage(request):
 def categorylist(request):
     context = {}
     return render(request, 'magazine/category_post_list.html', context)
+
+# price page view
+def pricepage(request):
+    context = {}
+    return render(request, 'magazine/pricing.html', context)
