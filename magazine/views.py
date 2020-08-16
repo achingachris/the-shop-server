@@ -25,6 +25,11 @@ def pricepage(request):
     context = {}
     return render(request, 'magazine/pricing.html', context)
 
+# contact
+def contactpage(request):
+    context = {}
+    return render(request, 'magazine/contact.html', context)
+
 # registration
 def reg(request):
     context = {}
