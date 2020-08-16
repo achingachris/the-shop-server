@@ -24,3 +24,8 @@ def categorylist(request):
 def pricepage(request):
     context = {}
     return render(request, 'magazine/pricing.html', context)
+
+# registration
+def reg(request):
+    context = {}
+    return render(request, 'accounts/reg.html', context)
