@@ -29,3 +29,8 @@ def pricepage(request):
 def reg(request):
     context = {}
     return render(request, 'accounts/reg.html', context)
+
+# login
+def login(request):
+    context = {}
+    return render(request, 'accounts/login.html', context)
