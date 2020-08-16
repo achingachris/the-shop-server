@@ -1,1 +1,1 @@
-# Coast Woman
+# Coast Woman Magazine
