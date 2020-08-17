@@ -29,17 +29,50 @@ class Category(models.Model):
     description = models.TextField()
     category_link = models.SlugField()
 
-# Article Model
-class Article(models.Model):
-    pass
-
 # Magazine Models
 class Magazine(models.Model):
-    pass
+    cover_image = models.ImageField()
+    title = models.CharField()
+    description = models.CharField()
+    magazine_link = models.SlugField()
+    image1 = models.ImageField()
+    image2 = models.ImageField()
+
+# Article Model
+class Article(models.Model):
+    # article status
+    STATUS = (
+        ('draft', 'Draft'),
+        ('published', 'Published')
+    )
+
+    cover_image = models.ImageField()
+    title = models.CharField()
+    subtitle = models.CharField()
+    description = models.CharField()
+    subheading1 = models.CharField()
+    body1 = models.TextField()
+    subheading2 = models.CharField()
+    body2 = models.TextField()
+    subheading3 = models.CharField()
+    body3 = models.TextField()
+    body_image = models.ImageField()
+    category = models.ForeignKey(Category)
+    magazine_issue = models.ForeignKey(Magazine)
+    published = models.CharField(choices=STATUS, default='draft')
+    publish_date = models.DateField()
+    author = models.ForeignKey(Author)
+    article_link = models.SlugField()
 
 # News Updates
 class News(models.Model):
-    pass
+    title = models.CharField()
+    image = models.ImageField()
+    description = models.CharField()
+    body = models.TextField()
+    category = models.ForeignKey(Category)
+    date = models.DateField()
+    news_link = models.SlugField()
 
 # subscriptions
 class Subscription(models.Model):
