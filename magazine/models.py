@@ -1,22 +1,27 @@
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 
 # Author Models
 class Author(models.Model):
-    author = models.OneToOneField(User, on_delete=models.CASCADE)
+    # user = models.OneToOneField(User, on_delete=models.CASCADE)
+    author_name = models.CharField('Author Display Name', max_length=25, null=False, default="Author")
+
 
     class Meta:
-        verbose_name = 'Author'
+        verbose_name = 'Authors'
         verbose_name_plural = verbose_name
+    
+    def __str__(self):
+       return self.author_name
         
 # Categories Models
 class Category(models.Model):
     # list of required categories required
     CATEGORY_LIST = (
         ('beauty', 'Beauty'),
-        ('trends', 'Travel'),
+        ('trends', 'Trends'),
         ('travel', 'Travel'),
         ('fashion', 'Fashion'),
         ('culture', 'Culture'),
@@ -33,23 +38,29 @@ class Category(models.Model):
     description = models.TextField(max_length=250, null=False)
     category_link = models.SlugField(max_length=25)
 
-    class meta:
-        verbose_name = 'Category'
+    class Meta:
+        verbose_name = 'Category List'
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+       return self.category
 
 
 # Magazine Models
 class Magazine(models.Model):
     cover_image = models.ImageField(upload_to='uploads/')
-    title = models.CharField(max_length=100, null=False)
+    mag_title = models.CharField(max_length=100, null=False)
     description = models.CharField(max_length=200, null=False)
     publish_date = models.DateField()
     magazine_link = models.SlugField(max_length=25, unique_for_date='publish_date')
     image = models.ImageField(upload_to='uploads/')
 
-    class meta:
-        verbose_name = "Magazine"
+    class Meta:
+        verbose_name = "Magazine Issues"
         verbose_name_plural = verbose_name
+    
+    def __str__(self):
+       return self.mag_title
 
 # Article Model
 class Article(models.Model):
@@ -73,9 +84,12 @@ class Article(models.Model):
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
     article_link = models.SlugField(max_length=25, unique_for_date='publish_date')
 
-    class meta:
-        verbose_name = "Magazine"
+    class Meta:
+        verbose_name = "Article list"
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+       return self.title
 
 # News Updates
 class News(models.Model):
@@ -87,9 +101,12 @@ class News(models.Model):
     date = models.DateField()
     news_link = models.SlugField(max_length=25, unique_for_date='date')
 
-    class meta:
-        verbose_name = "Magazine"
+    class Meta:
+        verbose_name = "News Updates"
         verbose_name_plural = verbose_name
+    
+    def __str__(self):
+       return self.title
 
 # subscriptions
 class Subscription(models.Model):

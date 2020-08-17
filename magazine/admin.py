@@ -5,7 +5,7 @@ from .models import *
 # admin.site.register(Author)
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
-   list_display = ('author',)
+   list_display = ('author_name',)
 
 # category panel
 # admin.site.register(Category)
@@ -17,7 +17,7 @@ class  CategoryAdmin(admin.ModelAdmin):
 # admin.site.register(Magazine)
 @admin.register(Magazine)
 class MagazineAdmin(admin.ModelAdmin):
-    list_display = ('title', 'publish_date')
+    list_display = ('mag_title', 'publish_date')
 
 # article panel
 # admin.site.register(Article)
