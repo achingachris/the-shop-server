@@ -5,8 +5,12 @@ from django.contrib.auth.models import User
 
 # Author Models
 class Author(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    author = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = 'Author'
+        verbose_name_plural = verbose_name
+        
 # Categories Models
 class Category(models.Model):
     # list of required categories required
@@ -29,6 +33,11 @@ class Category(models.Model):
     description = models.TextField(max_length=250, null=False)
     category_link = models.SlugField(max_length=25)
 
+    class meta:
+        verbose_name = 'Category'
+        verbose_name_plural = verbose_name
+
+
 # Magazine Models
 class Magazine(models.Model):
     cover_image = models.ImageField(upload_to='uploads/')
@@ -37,14 +46,6 @@ class Magazine(models.Model):
     publish_date = models.DateField()
     magazine_link = models.SlugField(max_length=25, unique_for_date='publish_date')
     image = models.ImageField(upload_to='uploads/')
-
-    # @property
-	# def imageURL(self):
-    #         try:
-    #             url = self.image.url
-    #         except:
-    #             url = ''
-    #         return url
 
 # Article Model
 class Article(models.Model):
@@ -81,14 +82,6 @@ class News(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     date = models.DateField()
     news_link = models.SlugField(max_length=25, unique_for_date='date')
-
-    # @property
-	# def imageURL(self):
-	# 	try:
-	# 		url = self.image.url
-	# 	except:
-	# 		url = ''
-	# 	return url
 
 # subscriptions
 class Subscription(models.Model):
