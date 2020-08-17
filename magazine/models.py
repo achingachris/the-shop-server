@@ -47,6 +47,10 @@ class Magazine(models.Model):
     magazine_link = models.SlugField(max_length=25, unique_for_date='publish_date')
     image = models.ImageField(upload_to='uploads/')
 
+    class meta:
+        verbose_name = "Magazine"
+        verbose_name_plural = verbose_name
+
 # Article Model
 class Article(models.Model):
     # article status
@@ -69,6 +73,10 @@ class Article(models.Model):
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
     article_link = models.SlugField(max_length=25, unique_for_date='publish_date')
 
+    class meta:
+        verbose_name = "Magazine"
+        verbose_name_plural = verbose_name
+
 # News Updates
 class News(models.Model):
     title = models.CharField(max_length=20, null=False)
@@ -78,6 +86,10 @@ class News(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     date = models.DateField()
     news_link = models.SlugField(max_length=25, unique_for_date='date')
+
+    class meta:
+        verbose_name = "Magazine"
+        verbose_name_plural = verbose_name
 
 # subscriptions
 class Subscription(models.Model):
