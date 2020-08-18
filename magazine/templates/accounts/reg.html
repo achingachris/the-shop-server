@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cw</title>
+    <title>Register | CW</title>
 
     <!-- font-awesome css -->
     <link
@@ -217,21 +217,19 @@
                 >
                   Register
                 </button>
-                <a class="d-block text-center mt-2 small" href="signin.html"
+                <a class="d-block text-center mt-2 small" href="{% url 'login' %}"
                   >Sign In</a
                 >
                 <hr class="my-4" />
                 <button
                   class="btn btn-lg btn-google btn-block text-uppercase"
-                  type="submit"
                 >
-                  <i class="fab fa-google mr-2"></i> Sign up with Google
+                  <a href="{% url 'price' %}"></a> View Prices
                 </button>
                 <button
                   class="btn btn-lg btn-facebook btn-block text-uppercase"
-                  type="submit"
                 >
-                  <i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook
+                  <a href="{% url 'home' %}">Continue Browsing</a></i> 
                 </button>
               </form>
             </div>
