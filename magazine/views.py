@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import * 
 
 # landing page view
 def landingPage(request):
-    context = {}
+    article = Article.objects.all()
+    category = Category.objects.all()
+    context = {'article':article, 'category':category}
     return render(request, 'magazine/index.html', context)
 
 # about page view

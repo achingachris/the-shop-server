@@ -45,6 +45,21 @@ class Category(models.Model):
     def __str__(self):
        return self.category
 
+    @property
+    def imageURL(self):
+        try:
+            url = self.cover_image.url
+        except:
+            url = ''
+        return url
+    # @property
+	# def imageURL(self):
+	# 	try:
+	# 		url = self.cover_image.url
+	# 	except:
+	# 		url = ''
+	# 	return url
+
 
 # Magazine Models
 class Magazine(models.Model):
@@ -76,7 +91,7 @@ class Article(models.Model):
     description = models.CharField(max_length=200, null=False)
     subheading = models.CharField(max_length=20, null=False)
     body = models.TextField()
-    body_image = models.ImageField(upload_to='uploads/')
+    body_image = models.ImageField(upload_to='uploads/', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     magazine_issue = models.ForeignKey(Magazine, on_delete=models.SET_NULL, null=True, blank=True)
     published = models.CharField(choices=STATUS, default='draft', max_length=20)
