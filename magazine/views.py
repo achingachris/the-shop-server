@@ -38,6 +38,7 @@ def magpage(request):
     context = {}
     return render(request, 'magazine/magazine.html', context)
 
+
 # registration
 def reg(request):
     context = {}
