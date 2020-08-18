@@ -1,109 +1,138 @@
-{% extends 'magazine/_base.html' %}
-{% load static %}
-
-{% block extrahead %} 
-<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+{% extends 'magazine/_base.html' %} {% load static %} {% block extrahead %}
+<link
+  href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+  rel="stylesheet"
+/>
 <!-- Custom fonts for this template -->
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link
+  href="vendor/fontawesome-free/css/all.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+  rel="stylesheet"
+  type="text/css"
+/>
 <!-- Custom styles for this template -->
-<link href="{% static 'css/read.css' %}" rel="stylesheet">
-{% endblock %}
-{% block title %} Categories | CW{% endblock %}
-
-{% block content %} 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url({% static 'img/home-bg.jpg' %})">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Category Posts</h1>
-            <span class="subheading">All articles on this Category</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
+<link href="{% static 'css/read.css' %}" rel="stylesheet" />
+{% endblock %} {% block title %} Categories | CW{% endblock %} {% block content
+%}
+<!-- Page Header -->
+<header
+  class="masthead"
+  style="background-image: url({%static'img/home-bg.jpg'%});"
+>
+  <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview">
-          <a href="{% url 'article' %}">
-            <h2 class="post-title">
-              Article Title 0
-            </h2>
-            <h3 class="post-subtitle">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laudantium eius ex aut, odit ipsam laboriosam commodi amet perferendis totam.
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Coast Woman</a>
-            on September 24, 2020</p>
+        <div class="site-heading">
+          <h1>Category Posts</h1>
+          <span class="subheading">All articles on this Category</span>
         </div>
-        <hr>
-        <div class="post-preview">
-          <a href="{% url 'article' %}">
-            <h2 class="post-title">
-              Article Title 1
-            </h2>
-            <h3 class="post-subtitle">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, assumenda suscipit eligendi quos et velit odit soluta tempore culpa enim consequatur animi laboriosam possimus minima?
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Coast Woman</a>
-            on September 18, 2020</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="{% url 'article' %}">
-            <h2 class="post-title">
-              Article Title 2
-            </h2>
-            <h3 class="post-subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore veniam nulla ipsam alias aliquid perspiciatis magnam facilis pariatur voluptatem sit deserunt, tempora inventore temporibus error molestias ad!
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Coast Woman</a>
-            on August 24, 2020</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="{% url 'article' %}">
-            <h2 class="post-title">
-              Article Title 3
-            </h2>
-            <h3 class="post-subtitle">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit iste qui, maxime recusandae odio vitae asperiores et doloribus nemo nisi doloremque, voluptatem tempora possimus similique saepe deleniti. Nesciunt, dolorem.
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Coast Woman</a>
-            on July 8, 2020</p>
-        </div>
-        <hr>
-        <!-- Pager -->
-        <!-- <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div> -->
       </div>
     </div>
   </div>
+</header>
 
-  <hr>
-{% endblock content %}
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="post-preview">
+        <a href="{% url 'article' %}">
+          <h2 class="post-title">
+            Article Title 0
+          </h2>
+          <h3 class="post-subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+            laudantium eius ex aut, odit ipsam laboriosam commodi amet
+            perferendis totam.
+          </h3>
+        </a>
+        <p class="post-meta">
+          Posted by
+          <a href="#">Coast Woman</a>
+          on September 24, 2020
+        </p>
+      </div>
+      <hr />
+      <div class="post-preview">
+        <a href="{% url 'article' %}">
+          <h2 class="post-title">
+            Article Title 1
+          </h2>
+          <h3 class="post-subtitle">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
+            assumenda suscipit eligendi quos et velit odit soluta tempore culpa
+            enim consequatur animi laboriosam possimus minima?
+          </h3>
+        </a>
+        <p class="post-meta">
+          Posted by
+          <a href="#">Coast Woman</a>
+          on September 18, 2020
+        </p>
+      </div>
+      <hr />
+      <div class="post-preview">
+        <a href="{% url 'article' %}">
+          <h2 class="post-title">
+            Article Title 2
+          </h2>
+          <h3 class="post-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore
+            veniam nulla ipsam alias aliquid perspiciatis magnam facilis
+            pariatur voluptatem sit deserunt, tempora inventore temporibus error
+            molestias ad!
+          </h3>
+        </a>
+        <p class="post-meta">
+          Posted by
+          <a href="#">Coast Woman</a>
+          on August 24, 2020
+        </p>
+      </div>
+      <hr />
+      <div class="post-preview">
+        <a href="{% url 'article' %}">
+          <h2 class="post-title">
+            Article Title 3
+          </h2>
+          <h3 class="post-subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit
+            iste qui, maxime recusandae odio vitae asperiores et doloribus nemo
+            nisi doloremque, voluptatem tempora possimus similique saepe
+            deleniti. Nesciunt, dolorem.
+          </h3>
+        </a>
+        <p class="post-meta">
+          Posted by
+          <a href="#">Coast Woman</a>
+          on July 8, 2020
+        </p>
+      </div>
+      <hr />
+      <!-- Pager -->
+      <!-- <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div> -->
+    </div>
+  </div>
+</div>
 
-{% block script %} 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<hr />
+{% endblock content %} {% block script %}
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="{% static 'js/clean-blog.js' %}"></script>
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/clean-blog.js' %}"></script>
 {% endblock %}

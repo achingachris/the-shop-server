@@ -1,332 +1,236 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+{% extends 'magazine/_base.html' %} {% load static %} {% block extrahead %}
+<!-- Bootstrap core CSS -->
+<link
+  href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+  rel="stylesheet"
+/>
 
-    <title>coast woman</title>
+<!-- Custom fonts for this template -->
+<link
+  href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+  rel="stylesheet"
+  type="text/css"
+/>
 
-    <!-- Bootstrap core CSS -->
-    <link
-      href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
-      rel="stylesheet"
-    />
-
-    <!-- Custom fonts for this template -->
-    <link
-      href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-      rel="stylesheet"
-      type="text/css"
-    />
-
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/read.css' %}" rel="stylesheet" />
-  </head>
-
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">Coast Woman</a>
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="category_post_list.html">Category</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="article.html">Next Article</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signin.html">Subscription</a>
-            </li>
-          </ul>
+<!-- Custom styles for this template -->
+<link href="{% static 'css/read.css' %}" rel="stylesheet" />
+{% endblock %} {% block title %}Article | CW{% endblock %} {% block content %}
+<!-- Page Header -->
+<header
+  class="masthead"
+  style="background-image: url({%static'img/post-bg.jpg'%});"
+>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>This Is An Article Title</h1>
+          <h2 class="subheading">This is a brief subheading</h2>
+          <span class="meta"
+            >Posted by
+            <a href="#">Coast Woman</a>
+            on August 24, 2020</span
+          >
         </div>
       </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header
-      class="masthead"
-      style="background-image: url({% static 'img/post-bg.jpg'%});"
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="post-heading">
-              <h1>This Is An Article Title</h1>
-              <h2 class="subheading">This is a brief subheading</h2>
-              <span class="meta"
-                >Posted by
-                <a href="#">Coast Woman</a>
-                on August 24, 2020</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error,
-              soluta nostrum totam debitis explicabo officia rerum provident
-              dolore eum! Itaque nemo adipisci nostrum sit quos officia expedita
-              qui eum numquam, ab saepe quas placeat tenetur accusamus porro
-              harum, mollitia odit blanditiis non ipsa commodi eligendi vitae
-              cum. Dicta tenetur voluptatum repellendus est nihil aliquam ipsam
-              impedit vel quaerat perspiciatis veritatis provident placeat
-              exercitationem, alias officia cumque. Odit tenetur voluptate
-              veritatis reprehenderit voluptatem, non officia quo tempora
-              impedit cupiditate dolor quisquam, iusto maiores rem recusandae
-              quod adipisci fugiat accusamus aliquam modi debitis quidem
-              incidunt distinctio esse. Consequatur odit aut iste quasi.
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              praesentium neque tenetur placeat iste nisi eaque possimus amet
-              est, quibusdam repellendus maiores, exercitationem voluptatum odio
-              consequatur reprehenderit recusandae! Ea doloribus, alias id nulla
-              dolore pariatur quis magnam nesciunt quod quibusdam reiciendis
-              veniam quia dolorum inventore officia blanditiis harum dolor
-              deserunt, excepturi quidem earum distinctio saepe totam sequi.
-              Ipsa, porro illum? Atque corporis ad blanditiis, molestias earum
-              debitis animi error laudantium voluptates magni nisi culpa
-              doloremque natus doloribus, tempora facere at nobis dolore alias
-              similique quae! Quos eum minus nesciunt, fugit deleniti non
-              aperiam hic cum accusantium totam, animi ea facere!
-            </p>
-
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
-              inventore sunt iure quaerat officia illum dolor officiis animi
-              autem reiciendis error doloremque est explicabo corporis id, non
-              neque molestias exercitationem?
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus dolores, facilis doloremque in cumque labore dolorum
-              nostrum omnis facere architecto minima commodi voluptas voluptatem
-              inventore magnam voluptates a corrupti itaque incidunt eos!
-              Consequuntur fugit possimus expedita, itaque eum, modi sunt
-              facilis esse nesciunt maiores maxime repellendus harum consequatur
-              repudiandae voluptatem? Cupiditate qui, aut eos voluptatem ex
-              labore expedita laudantium laboriosam. Veniam fugiat, quidem at
-              omnis minima non voluptatem distinctio nobis. Repudiandae soluta
-              saepe omnis quaerat voluptatibus perferendis voluptate, provident
-              iure aliquam necessitatibus maxime eius totam sapiente? Expedita
-              maxime corporis eveniet! Earum non ullam quis. Necessitatibus
-              aliquam ducimus accusantium aliquid officia!
-            </p>
-
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad iusto
-              sint debitis voluptatum adipisci? Dignissimos esse aliquid ipsa
-              atque aliquam, fugit quis ea dolorem debitis cum ipsam quaerat
-              sit, beatae eligendi excepturi deleniti labore autem non facere
-              iure inventore rem maiores perspiciatis. Nisi iste quasi impedit
-              dolores consectetur exercitationem iure! Labore nihil corrupti
-              possimus! Animi, dolorem delectus? Cupiditate architecto magnam
-              nulla beatae quia excepturi itaque voluptates molestiae fugit hic!
-              Libero nulla autem blanditiis quasi in error modi quidem dolore
-              quae esse! Voluptatum amet veniam sit, suscipit possimus, optio
-              fugiat, ad libero saepe quod magni pariatur impedit esse in
-              aliquid?
-            </p>
-
-            <h2 class="section-heading">The Final Frontier</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              ut quia asperiores sunt? Est libero recusandae aperiam natus error
-              facere non. Repudiandae saepe quibusdam amet corrupti pariatur
-              numquam, in sit hic ipsum mollitia qui atque ullam delectus,
-              eligendi, porro cupiditate. Magni a, nulla odit dicta, dolor
-              architecto et explicabo error molestiae quasi eligendi dolorum ad
-              quia iure maxime quisquam odio necessitatibus deserunt tenetur?
-              Provident explicabo laudantium, et ipsam dolorum, quidem
-              repudiandae quos debitis deserunt voluptate consequatur optio
-              omnis earum quisquam dolore perspiciatis eaque quaerat aliquam
-              magni facilis blanditiis alias modi adipisci! Provident at ipsum
-              blanditiis, minus laudantium sed asperiores cumque!
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem hic, vero quo sit minus asperiores rem. Temporibus
-              nesciunt deserunt quis eum! Sit aliquid odit quo alias eos,
-              molestias iste dicta cum iure facere obcaecati officia
-              perspiciatis fuga voluptatem dignissimos, nisi ratione doloremque.
-              Quidem sint beatae alias error harum iure facilis. Ut dicta soluta
-              quo eveniet inventore sit facilis excepturi? Omnis unde earum
-              corporis mollitia. Mollitia deleniti obcaecati itaque corrupti
-              nulla!
-            </p>
-
-            <blockquote class="blockquote">
-              The dreams of yesterday are the hopes of today and the reality of
-              tomorrow. Science has not yet mastered prophecy. We predict too
-              much for the next year and yet far too little for the next ten.
-            </blockquote>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              autem aut sint repellendus accusamus sit fuga doloremque!
-              Quibusdam delectus, sequi atque velit provident beatae suscipit
-              recusandae impedit asperiores dolores voluptates, voluptatibus
-              voluptatem sapiente. Sint tempore suscipit ipsa enim porro
-              quibusdam sequi sit molestias inventore asperiores ex praesentium
-              aspernatur odio quam, iure, hic eveniet qui? Alias similique
-              laboriosam tempore unde at veniam pariatur odio. Ullam sequi ab
-              quo hic, sunt qui laborum animi voluptatum, itaque reprehenderit
-              molestias dicta possimus?
-            </p>
-
-            <h2 class="section-heading">Reaching for the Stars</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-              voluptatem quasi nam? Iusto, doloremque. Eaque consectetur iusto
-              non ex voluptate, rerum, cum mollitia eos dolor sunt perspiciatis.
-              Nemo, perspiciatis ipsam facere nam hic labore distinctio
-              necessitatibus provident facilis officiis eum? Vitae voluptas
-              dolorum dolorem quod odit. Nihil magnam dolorem eveniet neque
-              ipsum dolores nulla qui alias quia blanditiis iure perspiciatis
-              voluptatum tenetur veniam, in eos sed saepe unde temporibus eum
-              totam doloribus odit? Aliquid dolores, aliquam amet eius
-              temporibus in dolorum quas corporis adipisci eaque enim vero
-              mollitia cumque fuga explicabo? Vitae, maiores accusamus in
-              asperiores iure quas eos qui.
-            </p>
-
-            <a href="#">
-              <img
-                class="img-fluid"
-                src="{% static 'img/post-sample-image.jpg' %}"
-                alt=""
-              />
-            </a>
-            <span class="caption text-muted"
-              >To go places and do things that have never been done before –
-              that’s what living is all about.</span
-            >
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              necessitatibus, dolor illo expedita assumenda ipsum iusto sint
-              voluptates esse eveniet et doloribus odit debitis repellendus
-              nulla, dolore, provident laboriosam sunt excepturi deleniti est
-              voluptatibus rerum! Hic natus, tenetur ab quisquam corporis ipsam.
-              Cumque, consectetur! Doloremque obcaecati id voluptatum
-              architecto, impedit minus officiis quos repellat necessitatibus.
-            </p>
-
-            <p>
-              As I stand out here in the wonders of the unknown at Hadley, I
-              sort of realize there’s a fundamental truth to our nature, Man
-              must explore, and this is exploration at its greatest.
-            </p>
-
-            <p>
-              Placeholder text by
-              <a href="http://spaceipsum.com/">Lorem Ipsum</a>. Photographs by
-              <a href="https://www.flickr.com/photos/nasacommons/"
-                >NASA's Coast Women</a
-              >.
-            </p>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <hr />
-
-    <div class="clearfix text-center">
-      <a class="btn btn-primary float-right" href="category_post_list.html"
-        >Back &rarr;</a
-      >
     </div>
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">
-              Copyright &copy; Your Website 2020
-            </p>
-          </div>
-        </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error,
+          soluta nostrum totam debitis explicabo officia rerum provident dolore
+          eum! Itaque nemo adipisci nostrum sit quos officia expedita qui eum
+          numquam, ab saepe quas placeat tenetur accusamus porro harum, mollitia
+          odit blanditiis non ipsa commodi eligendi vitae cum. Dicta tenetur
+          voluptatum repellendus est nihil aliquam ipsam impedit vel quaerat
+          perspiciatis veritatis provident placeat exercitationem, alias officia
+          cumque. Odit tenetur voluptate veritatis reprehenderit voluptatem, non
+          officia quo tempora impedit cupiditate dolor quisquam, iusto maiores
+          rem recusandae quod adipisci fugiat accusamus aliquam modi debitis
+          quidem incidunt distinctio esse. Consequatur odit aut iste quasi.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+          praesentium neque tenetur placeat iste nisi eaque possimus amet est,
+          quibusdam repellendus maiores, exercitationem voluptatum odio
+          consequatur reprehenderit recusandae! Ea doloribus, alias id nulla
+          dolore pariatur quis magnam nesciunt quod quibusdam reiciendis veniam
+          quia dolorum inventore officia blanditiis harum dolor deserunt,
+          excepturi quidem earum distinctio saepe totam sequi. Ipsa, porro
+          illum? Atque corporis ad blanditiis, molestias earum debitis animi
+          error laudantium voluptates magni nisi culpa doloremque natus
+          doloribus, tempora facere at nobis dolore alias similique quae! Quos
+          eum minus nesciunt, fugit deleniti non aperiam hic cum accusantium
+          totam, animi ea facere!
+        </p>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+          inventore sunt iure quaerat officia illum dolor officiis animi autem
+          reiciendis error doloremque est explicabo corporis id, non neque
+          molestias exercitationem?
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          dolores, facilis doloremque in cumque labore dolorum nostrum omnis
+          facere architecto minima commodi voluptas voluptatem inventore magnam
+          voluptates a corrupti itaque incidunt eos! Consequuntur fugit possimus
+          expedita, itaque eum, modi sunt facilis esse nesciunt maiores maxime
+          repellendus harum consequatur repudiandae voluptatem? Cupiditate qui,
+          aut eos voluptatem ex labore expedita laudantium laboriosam. Veniam
+          fugiat, quidem at omnis minima non voluptatem distinctio nobis.
+          Repudiandae soluta saepe omnis quaerat voluptatibus perferendis
+          voluptate, provident iure aliquam necessitatibus maxime eius totam
+          sapiente? Expedita maxime corporis eveniet! Earum non ullam quis.
+          Necessitatibus aliquam ducimus accusantium aliquid officia!
+        </p>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad iusto
+          sint debitis voluptatum adipisci? Dignissimos esse aliquid ipsa atque
+          aliquam, fugit quis ea dolorem debitis cum ipsam quaerat sit, beatae
+          eligendi excepturi deleniti labore autem non facere iure inventore rem
+          maiores perspiciatis. Nisi iste quasi impedit dolores consectetur
+          exercitationem iure! Labore nihil corrupti possimus! Animi, dolorem
+          delectus? Cupiditate architecto magnam nulla beatae quia excepturi
+          itaque voluptates molestiae fugit hic! Libero nulla autem blanditiis
+          quasi in error modi quidem dolore quae esse! Voluptatum amet veniam
+          sit, suscipit possimus, optio fugiat, ad libero saepe quod magni
+          pariatur impedit esse in aliquid?
+        </p>
+
+        <h2 class="section-heading">The Final Frontier</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ut
+          quia asperiores sunt? Est libero recusandae aperiam natus error facere
+          non. Repudiandae saepe quibusdam amet corrupti pariatur numquam, in
+          sit hic ipsum mollitia qui atque ullam delectus, eligendi, porro
+          cupiditate. Magni a, nulla odit dicta, dolor architecto et explicabo
+          error molestiae quasi eligendi dolorum ad quia iure maxime quisquam
+          odio necessitatibus deserunt tenetur? Provident explicabo laudantium,
+          et ipsam dolorum, quidem repudiandae quos debitis deserunt voluptate
+          consequatur optio omnis earum quisquam dolore perspiciatis eaque
+          quaerat aliquam magni facilis blanditiis alias modi adipisci!
+          Provident at ipsum blanditiis, minus laudantium sed asperiores cumque!
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Exercitationem hic, vero quo sit minus asperiores rem. Temporibus
+          nesciunt deserunt quis eum! Sit aliquid odit quo alias eos, molestias
+          iste dicta cum iure facere obcaecati officia perspiciatis fuga
+          voluptatem dignissimos, nisi ratione doloremque. Quidem sint beatae
+          alias error harum iure facilis. Ut dicta soluta quo eveniet inventore
+          sit facilis excepturi? Omnis unde earum corporis mollitia. Mollitia
+          deleniti obcaecati itaque corrupti nulla!
+        </p>
+
+        <blockquote class="blockquote">
+          The dreams of yesterday are the hopes of today and the reality of
+          tomorrow. Science has not yet mastered prophecy. We predict too much
+          for the next year and yet far too little for the next ten.
+        </blockquote>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          autem aut sint repellendus accusamus sit fuga doloremque! Quibusdam
+          delectus, sequi atque velit provident beatae suscipit recusandae
+          impedit asperiores dolores voluptates, voluptatibus voluptatem
+          sapiente. Sint tempore suscipit ipsa enim porro quibusdam sequi sit
+          molestias inventore asperiores ex praesentium aspernatur odio quam,
+          iure, hic eveniet qui? Alias similique laboriosam tempore unde at
+          veniam pariatur odio. Ullam sequi ab quo hic, sunt qui laborum animi
+          voluptatum, itaque reprehenderit molestias dicta possimus?
+        </p>
+
+        <h2 class="section-heading">Reaching for the Stars</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+          voluptatem quasi nam? Iusto, doloremque. Eaque consectetur iusto non
+          ex voluptate, rerum, cum mollitia eos dolor sunt perspiciatis. Nemo,
+          perspiciatis ipsam facere nam hic labore distinctio necessitatibus
+          provident facilis officiis eum? Vitae voluptas dolorum dolorem quod
+          odit. Nihil magnam dolorem eveniet neque ipsum dolores nulla qui alias
+          quia blanditiis iure perspiciatis voluptatum tenetur veniam, in eos
+          sed saepe unde temporibus eum totam doloribus odit? Aliquid dolores,
+          aliquam amet eius temporibus in dolorum quas corporis adipisci eaque
+          enim vero mollitia cumque fuga explicabo? Vitae, maiores accusamus in
+          asperiores iure quas eos qui.
+        </p>
+
+        <a href="#">
+          <img
+            class="img-fluid"
+            src="{% static 'img/post-sample-image.jpg' %}"
+            alt=""
+          />
+        </a>
+        <span class="caption text-muted"
+          >To go places and do things that have never been done before – that’s
+          what living is all about.</span
+        >
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+          necessitatibus, dolor illo expedita assumenda ipsum iusto sint
+          voluptates esse eveniet et doloribus odit debitis repellendus nulla,
+          dolore, provident laboriosam sunt excepturi deleniti est voluptatibus
+          rerum! Hic natus, tenetur ab quisquam corporis ipsam. Cumque,
+          consectetur! Doloremque obcaecati id voluptatum architecto, impedit
+          minus officiis quos repellat necessitatibus.
+        </p>
+
+        <p>
+          As I stand out here in the wonders of the unknown at Hadley, I sort of
+          realize there’s a fundamental truth to our nature, Man must explore,
+          and this is exploration at its greatest.
+        </p>
+
+        <p>
+          Placeholder text by
+          <a href="http://spaceipsum.com/">Lorem Ipsum</a>. Photographs by
+          <a href="https://www.flickr.com/photos/nasacommons/"
+            >NASA's Coast Women</a
+          >.
+        </p>
       </div>
-    </footer>
+    </div>
+  </div>
+</article>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<hr />
 
-    <!-- Custom scripts for this template -->
-    <script src="{% static 'js/clean-blog.js' %}"></script>
-  </body>
-</html>
+<div class="clearfix text-center">
+  <a class="btn btn-primary float-right" href="category_post_list.html"
+    >Back &rarr;</a
+  >
+</div>
+{% endblock content %} {% block script %}
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/clean-blog.js' %}"></script>
+{% endblock %}
