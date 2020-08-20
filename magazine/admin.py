@@ -1,6 +1,11 @@
 from django.contrib import admin
 from .models import *
 
+# page titles
+admin.site.site_header = 'Coast Woman'
+admin.site.site_title = 'Coast Woman'
+admin.site.index_title = 'Coast Woman Admin'
+
 # author panel
 # admin.site.register(Author)
 @admin.register(Author)
@@ -24,6 +29,7 @@ class MagazineAdmin(admin.ModelAdmin):
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'published', 'publish_date', 'author')
+    prepopulated_fields = {'article_link': ('title',)}
 
 # News panel
 # admin.site.register(News)

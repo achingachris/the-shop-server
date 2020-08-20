@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, DetailView # test-view
 from .models import * 
 
 # landing page view
@@ -48,3 +49,14 @@ def reg(request):
 def login(request):
     context = {}
     return render(request, 'accounts/login.html', context)
+
+
+# test-views here
+# class ArticleListView(ListView):
+#     model = Article
+#     template_name = 'article_list.html'
+
+
+# class ArticleDetailView(DetailView):
+#     model = Article
+#     template_name = 'article_detail.html'

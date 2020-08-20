@@ -36,7 +36,7 @@ class Category(models.Model):
     category = models.CharField('Category Name', choices=CATEGORY_LIST, default='general', max_length=20)
     cover_image = models.ImageField(upload_to='uploads/')
     description = models.TextField(max_length=250, null=False)
-    category_link = models.SlugField(max_length=25)
+    category_link = models.SlugField(max_length=200, null=False, unique=True, default='artcle')
 
     class Meta:
         verbose_name = 'Category List'
@@ -52,13 +52,7 @@ class Category(models.Model):
         except:
             url = ''
         return url
-    # @property
-	# def imageURL(self):
-	# 	try:
-	# 		url = self.cover_image.url
-	# 	except:
-	# 		url = ''
-	# 	return url
+
 
 
 # Magazine Models
@@ -67,7 +61,7 @@ class Magazine(models.Model):
     mag_title = models.CharField(max_length=100, null=False)
     description = models.CharField(max_length=200, null=False)
     publish_date = models.DateField()
-    magazine_link = models.SlugField(max_length=25, unique_for_date='publish_date')
+    magazine_link = models.SlugField(max_length=200, unique=True)
     image = models.ImageField(upload_to='uploads/')
 
     class Meta:
@@ -97,7 +91,7 @@ class Article(models.Model):
     published = models.CharField(choices=STATUS, default='draft', max_length=20)
     publish_date = models.DateField(auto_now_add=True)
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
-    article_link = models.SlugField(max_length=25, unique_for_date='publish_date')
+    article_link = models.SlugField(max_length=200, unique=True)
 
     class Meta:
         verbose_name = "Article list"
@@ -105,6 +99,9 @@ class Article(models.Model):
 
     def __str__(self):
        return self.title
+
+    def get_absolute_url(self):
+        return reverse('article_detail', kwargs={'slug': self.article_link})
 
 # News Updates
 class News(models.Model):
@@ -114,7 +111,7 @@ class News(models.Model):
     body = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     date = models.DateField()
-    news_link = models.SlugField(max_length=25, unique_for_date='date')
+    news_link = models.SlugField(max_length=200, unique=True)
 
     class Meta:
         verbose_name = "News Updates"
