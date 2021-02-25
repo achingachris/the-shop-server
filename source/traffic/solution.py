@@ -4,7 +4,6 @@ input = open("sol.txt", "r")
 data = input.readline()
 print(type(data))
 print(data)
-
 data_array = data.split()
 
 time = data_array[0]
@@ -22,7 +21,6 @@ print(cars + ' ' + 'cars')
 points = data_array[4]
 print(points + ' ' + 'points for completing')
 
-# print(data_array)
-# length = len(data)
-
-
+print(input)
+lines=input.readlines()
+print(lines[1])
