@@ -1,3 +1,0 @@
-6, 2, 2, 2, 1000
-1, 2, nairobi_to_mombasa 3
-2, 1, mombasa_to_nairobi 3
