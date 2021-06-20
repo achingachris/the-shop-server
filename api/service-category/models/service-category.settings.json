@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_categories",
+  "info": {
+    "name": "Service Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

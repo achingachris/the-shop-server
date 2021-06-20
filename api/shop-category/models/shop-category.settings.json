@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_categories",
+  "info": {
+    "name": "Shop Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
