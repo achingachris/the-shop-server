@@ -17,6 +17,10 @@
     },
     "description": {
       "type": "text"
+    },
+    "products": {
+      "via": "categories",
+      "collection": "products"
     }
   }
 }

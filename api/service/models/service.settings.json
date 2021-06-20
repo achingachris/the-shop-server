@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "shop_categories",
+  "collectionName": "services",
   "info": {
-    "name": "Shop Category"
+    "name": "Service"
   },
   "options": {
     "increments": true,
@@ -12,16 +12,18 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string",
-      "unique": true,
-      "required": true
+      "type": "string"
     },
     "description": {
       "type": "text"
     },
-    "shops": {
-      "via": "categories",
-      "collection": "shop"
+    "categories": {
+      "collection": "service-category",
+      "via": "services",
+      "dominant": true
+    },
+    "shop": {
+      "model": "shop"
     }
   }
 }
