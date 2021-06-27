@@ -541,14 +541,14 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "services": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "slug": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"
@@ -588,6 +588,9 @@
                   "type": "string"
                 }
               },
+              "slug": {
+                "type": "uid"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -598,6 +601,15 @@
                 "type": "string"
               }
             }
+          },
+          "Price": {
+            "type": "number"
+          },
+          "per_service_price": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -621,6 +633,15 @@
           },
           "shop": {
             "type": "string"
+          },
+          "Price": {
+            "type": "number"
+          },
+          "per_service_price": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",

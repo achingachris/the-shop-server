@@ -612,14 +612,14 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "shops": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "slug": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"
@@ -632,6 +632,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -655,6 +658,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
