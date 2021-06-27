@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/20/2021 4:48:16 PM"
+    "x-generation-date": "06/27/2021 9:57:33 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5390,9 +5390,6 @@
           "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
           "products": {
             "type": "array",
             "items": {
@@ -5433,6 +5430,9 @@
               }
             }
           },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5444,14 +5444,14 @@
           "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
           "products": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -5569,6 +5569,9 @@
                   "type": "string"
                 }
               },
+              "slug": {
+                "type": "uid"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -5597,14 +5600,14 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "products": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "slug": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"
@@ -5665,9 +5668,6 @@
           "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
           "services": {
             "type": "array",
             "items": {
@@ -5693,6 +5693,15 @@
                 "shop": {
                   "type": "string"
                 },
+                "Price": {
+                  "type": "number"
+                },
+                "per_service_price": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -5705,6 +5714,9 @@
               }
             }
           },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5716,14 +5728,14 @@
           "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
           "services": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -5764,14 +5776,14 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "services": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "slug": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"
@@ -5811,6 +5823,9 @@
                   "type": "string"
                 }
               },
+              "slug": {
+                "type": "uid"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -5821,6 +5836,15 @@
                 "type": "string"
               }
             }
+          },
+          "Price": {
+            "type": "number"
+          },
+          "per_service_price": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -5845,6 +5869,15 @@
           "shop": {
             "type": "string"
           },
+          "Price": {
+            "type": "number"
+          },
+          "per_service_price": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5867,9 +5900,6 @@
             "type": "string"
           },
           "name": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "shops": {
@@ -5900,6 +5930,9 @@
                     "type": "string"
                   }
                 },
+                "slug": {
+                  "type": "uid"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -5911,6 +5944,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -5926,14 +5962,14 @@
           "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
           "shops": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -6045,14 +6081,14 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "shops": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "slug": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"
@@ -6065,6 +6101,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -6088,6 +6127,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
