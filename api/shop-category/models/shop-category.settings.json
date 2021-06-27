@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "shop_categories",
   "info": {
-    "name": "Shop Category"
+    "name": "Shop Category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,12 +17,13 @@
       "unique": true,
       "required": true
     },
-    "description": {
-      "type": "text"
-    },
     "shops": {
       "via": "categories",
       "collection": "shop"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

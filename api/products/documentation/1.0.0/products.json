@@ -618,6 +618,9 @@
                   "type": "string"
                 }
               },
+              "slug": {
+                "type": "uid"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -646,14 +649,14 @@
                 "name": {
                   "type": "string"
                 },
-                "description": {
-                  "type": "string"
-                },
                 "products": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "slug": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"

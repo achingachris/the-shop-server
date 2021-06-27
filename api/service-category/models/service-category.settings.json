@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "service_categories",
   "info": {
-    "name": "Service Category"
+    "name": "Service Category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -14,12 +15,13 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "string"
-    },
     "services": {
       "via": "categories",
       "collection": "service"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

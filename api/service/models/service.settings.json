@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "services",
   "info": {
-    "name": "Service"
+    "name": "Service",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -18,12 +19,22 @@
       "type": "text"
     },
     "categories": {
-      "collection": "service-category",
       "via": "services",
+      "collection": "service-category",
       "dominant": true
     },
     "shop": {
       "model": "shop"
+    },
+    "Price": {
+      "type": "float"
+    },
+    "per_service_price": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
