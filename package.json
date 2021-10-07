@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "mern stack ecommerce application backend",
   "main": "app.js",
+  "type": "module",
   "scripts": {
+    "start": "node app",
+    "server": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
