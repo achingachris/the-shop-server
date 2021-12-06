@@ -7,6 +7,8 @@
   "scripts": {
     "start": "node app",
     "server": "nodemon app",
+    "data:import": "node seeder",
+    "data:destroy": "node seeder -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
