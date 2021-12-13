@@ -1,48 +1,30 @@
 {
   "name": "the-shop-server",
-  "version": "0.0.1",
-  "description": "mern stack ecommerce application backend",
-  "main": "app.js",
+  "version": "1.0.0",
+  "description": "MERN shopping cart app",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node app",
-    "server": "nodemon app",
-    "data:import": "node seeder",
-    "data:destroy": "node seeder -d",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/achingachris/the-shop-server-side.git"
-  },
-  "keywords": [
-    "javascript",
-    "ecommerce",
-    "express",
-    "mern",
-    "express",
-    "rest",
-    "graphql"
-  ],
-  "author": "chris achinga",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/achingachris/the-shop-server-side/issues"
-  },
-  "homepage": "https://github.com/achingachris/the-shop-server-side#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.13"
-  },
+  "author": "Brad Traversy",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "color": "^4.0.1",
     "colors": "^1.4.0",
-    "dotenv": "^10.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.9",
+    "mongoose": "^5.10.6",
     "morgan": "^1.10.0",
     "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
